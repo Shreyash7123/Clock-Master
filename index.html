@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock Master - Educational Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <h1>⏰ Clock Master ⏰</h1>
+      <p>Learn to tell time like a pro!</p>
+    </div>
+
+    <div class="instructions">
+      <h3>How to Play:</h3>
+      <p>
+        Look at the clock and choose the correct time! 
+        The small hand shows hours and the big hand shows minutes.
+      </p>
+    </div>
+
+    <div class="difficulty-selector">
+      <button class="difficulty-btn active" onclick="setDifficulty('easy', this)">Easy</button>
+      <button class="difficulty-btn" onclick="setDifficulty('medium', this)">Medium</button>
+      <button class="difficulty-btn" onclick="setDifficulty('hard', this)">Hard</button>
+    </div>
+
+    <div class="controls">
+      <button class="btn start-btn" onclick="startGame()">START</button>
+      <button class="btn reset-btn" onclick="resetGame()">RESET</button>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill">
+        <span id="progressText">0/10</span>
+      </div>
+    </div>
+
+    <div class="score-board">
+      <div class="score-item">
+        <div class="score-label">Score</div>
+        <div class="score-value" id="score">0</div>
+      </div>
+      <div class="score-item">
+        <div class="score-label">Level</div>
+        <div class="score-value" id="level">1</div>
+      </div>
+    </div>
+
+    <div class="question" id="question">Click START to begin learning time!</div>
+    <div class="hint" id="hint"></div>
+
+    <div class="clock-container">
+      <canvas id="clockCanvas" width="350" height="350"></canvas>
+    </div>
+
+    <div class="time-buttons" id="timeButtons"></div>
+    <div class="feedback" id="feedback"></div>
+
+    <div class="game-over" id="gameOver">
+      <h2>🎊 Congratulations! 🎊</h2>
+      <div class="trophy" id="trophy"></div>
+      <p id="finalScore"></p>
+      <p id="performance"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
